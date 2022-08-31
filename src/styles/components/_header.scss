@@ -1,0 +1,139 @@
+@use "../abstracts" as *;
+
+.container {
+  height: 100%;
+}
+
+.header {
+  position: relative;
+  z-index: 10;
+  width: 100%;
+  height: 62px;
+  background: $white;
+
+  @include respond-to("desktop") {
+    height: 82px;
+  }
+
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 10px;
+    padding-bottom: 5px;
+    height: 100%;
+    z-index: 10;
+
+    .menu-btn {
+      cursor: pointer;
+      position: relative;
+      z-index: 10;
+      padding-left: 4px;
+
+      @include respond-to("desktop") {
+        display: none;
+      }
+
+      &.menu-btn_open {
+        span {
+          &:nth-child(2) {
+            opacity: 0;
+            transition: 0.5s;
+          }
+
+          &:first-child {
+            top: 7px;
+            transform: rotate(225deg);
+            transition: 0.5s;
+          }
+
+          &:last-child {
+            top: -7px;
+            rotate: (-225deg);
+            transition: 0.5s;
+          }
+        }
+      }
+
+      span {
+        display: block;
+        transition: 0.5s;
+        position: relative;
+        width: 23px;
+        height: 3px;
+        margin-bottom: 4px;
+        background-color: $brown;
+        border-radius: 2px;
+      }
+    }
+  }
+
+  .logo {
+    margin-right: auto;
+    padding-left: 15px;
+    z-index: 6;
+
+    @include respond-to("desktop") {
+      margin: 0;
+    }
+    &__link-img {
+      width: 136px;
+      height: 21px;
+
+      @include respond-to("tablet") {
+        width: 150px;
+        height: 25px;
+      }
+      @include respond-to("desktop") {
+        width: 171px;
+        height: 27px;
+      }
+    }
+  }
+
+  .buttons {
+    display: flex;
+    z-index: 5;
+
+    &__auth {
+      background-color: $dark-yellow;
+      border-radius: 29px;
+      border: none;
+      width: 78px;
+      height: 32px;
+      // transition: 0.5s;
+
+      //   &_hidden {
+      //     transition: 0.5s;
+      //     transform: translateY(-200px);
+      // }
+      &:hover {
+        color: $red;
+      }
+
+      @include respond-to("desktop"){
+        width: 120px;
+        height: 40px;
+      }
+    }
+
+    &__reg {
+      display: none;
+
+      @include respond-to("desktop") {
+        display: block;
+        margin-left: 20px;
+        outline: none;
+        border: none;
+        background: transparent;
+      }
+
+      &:hover {
+        color: $red;
+      }
+    }
+  }
+}
+
+
+

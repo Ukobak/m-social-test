@@ -1,0 +1,171 @@
+@use "../abstracts/" as *;
+
+.main-section {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  height: calc(140vw / 2);
+
+  @include respond-to("desktop") {
+    height: calc(90vw / 2);
+  }
+
+  &__button {
+    position: absolute;
+    background: $red;
+    border-radius: 29px;
+    border: 7px solid $gray;
+    padding: 4px 24px;
+    font-size: 14px;
+    text-transform: uppercase;
+    z-index: 4;
+    color: $gray;
+    bottom: -26.5%;
+
+    @include respond-to("tablet") {
+      bottom: -24%;
+    }
+
+    @include respond-to("desktop") {
+      bottom: -24%;
+      font-size: 16px;
+      padding: 15px 50px;
+    }
+
+    &:hover {
+      background-color: $brown;
+    }
+  }
+
+  &__inner {
+    bottom: -20%;
+  }
+}
+
+.ellipse {
+  width: 195%;
+  height: 125vw;
+  border-radius: 50%;
+  position: absolute;
+  background-color: $yellow;
+  overflow: hidden;
+  z-index: 3;
+
+  @include respond-to("desktop") {
+    border: 18px solid $yellow;
+  }
+
+  &__image {
+    position: absolute;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  &__kitchen {
+    width: 53%;
+    height: 43%;
+    bottom: 0%;
+    left: 9%;
+    background-image: url("../../images/main/kitchen.png");
+
+    @include respond-to("desktop") {
+      width: 36%;
+      height: 29%;
+      bottom: 0%;
+      left: 21%;
+    }
+  }
+
+  &__cheese {
+    background-image: url("../../images/main/cheese.png");
+    bottom: 0%;
+    right: 25%;
+    width: 29%;
+    height: 39%;
+    @include respond-to("desktop") {
+      bottom: 0%;
+      right: 27%;
+      width: 26%;
+      height: 33%;
+    }
+  }
+
+  &__text {
+    background-image: url("../../images/main/text.png");
+    bottom: 33%;
+    left: 25%;
+    width: 30%;
+    height: 32%;
+    @include respond-to("desktop") {
+      bottom: 18%;
+      left: 26%;
+      width: 22%;
+      height: 24%;
+    }
+  }
+
+  &__dwarf {
+    background-image: url("../../images/main/dwarf.png");
+    bottom: 9%;
+    left: 34%;
+    width: 33%;
+    height: 49%;
+    @include respond-to("desktop") {
+      bottom: 5%;
+      left: 33%;
+      width: 22%;
+      height: 33%;
+    }
+  }
+
+  &__grand-prize {
+    background-image: url("../../images/main/grand-prize.png");
+    bottom: 31%;
+    right: 26%;
+    width: 8.4%;
+    height: 13%;
+    @include respond-to("desktop") {
+      bottom: 26%;
+      right: 29.5%;
+      width: 6.3%;
+      height: 9.8%;
+    }
+  }
+
+  //retina-ready
+  @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+    &__kitchen {
+      background-image: url("../../images/main/kitchen@2x.png");
+    }
+    &__cheese {
+      background-image: url("../../images/main/cheese@2x.png");
+    }
+    &__text {
+      background-image: url("../../images/main/text@2x.png");
+    }
+    &__dwarf {
+      background-image: url("../../images/main/dwarf@2x.png");
+    }
+    &__grand-prize {
+      background-image: url("../../images/main/grand-prize@2x.png");
+    }
+  }
+
+  @media (-webkit-min-device-pixel-ratio: 3), (min-resolution: 250dpi) {
+    &__kitchen {
+      background-image: url("../../images/main/kitchen@3x.png");
+    }
+    &__cheese {
+      background-image: url("../../images/main/cheese@3x.png");
+    }
+    &__text {
+      background-image: url("../../images/main/text@3x.png");
+    }
+    &__dwarf {
+      background-image: url("../../images/main/dwarf@3x.png");
+    }
+    &__grand-prize {
+      background-image: url("../../images/main/grand-prize@3x.png");
+    }
+  }
+}
