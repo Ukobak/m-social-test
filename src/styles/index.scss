@@ -72,13 +72,12 @@ video {
 
 html {
   scroll-behavior: smooth;
+  overflow-x: hidden;
 }
 
 body {
-  overscroll-behavior: auto;
-  overflow: auto;
+  overflow: hidden;
   min-width: 320px;
-  overflow-x: hidden;
   overflow-y: auto;
   font-family: $font_regular;
 }
