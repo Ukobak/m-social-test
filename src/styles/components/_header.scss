@@ -101,12 +101,12 @@
       border: none;
       width: 78px;
       height: 32px;
-      // transition: 0.5s;
+      transition: 0.5s;
 
-      //   &_hidden {
-      //     transition: 0.5s;
-      //     transform: translateY(-200px);
-      // }
+        &_hidden {
+          transition: 0.5s;
+          transform: translateY(-200px);
+      }
       &:hover {
         color: $red;
       }
