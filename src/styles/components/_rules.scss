@@ -1,0 +1,139 @@
+@use "../abstracts/" as *;
+
+.rules {
+  background-color: $yellow;
+  padding: 30% 0 50px 0;
+  position: relative;
+
+  @include respond-to("desktop") {
+    padding-top: 220px;
+    background: linear-gradient(180deg, $dark-yellow 0%, $yellow 78.83%);
+  }
+  &::before {
+    content: "";
+    background-image: url("../../images/rules/background/spiral_brown.svg");
+    background-size: cover;
+    position: absolute;
+    bottom: -20px;
+    left: 15%;
+    width: 45px;
+    height: 40px;
+    @include respond-to("desktop") {
+      width: 55px;
+      height: 50px;
+    }
+  }
+
+  .container {
+    position: relative;
+
+    &::before {
+      content: "";
+      background-image: url("../../images/rules/background/balloon.svg");
+      background-size: cover;
+      position: absolute;
+      width: 50px;
+      height: 98px;
+      left: 5%;
+      top: 10%;
+
+      @include respond-to("tablet") {
+        top: -10%;
+        left: 5%;
+        width: 70px;
+        height: 138px;
+      }
+    }
+
+    &::after {
+      content: "";
+      background-image: url("../../images/rules/background/spiral_white.svg");
+      background-size: cover;
+      position: absolute;
+      width: 21px;
+      height: 32px;
+      right: 13%;
+      top: 9%;
+
+      @include respond-to("tablet") {
+        width: 31px;
+        height: 47px;
+        top: -5%;
+        right: 8%;
+      }
+    }
+  }
+
+  &__title {
+    color: $red;
+    font-size: 34px;
+    text-align: center;
+    font-weight: 600;
+    text-shadow: -3px 2px 0px rgba(255, 255, 255, 1);
+    text-transform: uppercase;
+
+    @include respond-to("tablet") {
+      font-size: 50px;
+    }
+    @include respond-to("desktop") {
+      font-size: 60px;
+    }
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    @include respond-to("desktop") {
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: flex-start;
+      margin-top: 60px;
+    }
+  }
+
+  &__item {
+    position: relative;
+    padding: 25px 0;
+    display: flex;
+    flex-direction: column;
+    @include respond-to("desktop") {
+      max-width: 195px;
+    }
+  }
+
+  &__image {
+    min-height: 47px;
+    max-height: 47px;
+
+    @include respond-to("tablet") {
+      min-height: 60px;
+    }
+
+    @include respond-to("desktop") {
+      min-height: 55px;
+      max-height: 55px;
+    }
+  }
+
+  &__text {
+    text-align: center;
+    max-width: 195px;
+    padding-top: 20px;
+    font-size: 20px;
+    font-weight: 400;
+    @include respond-to("desktop") {
+      font-size: 20px;
+      font-weight: 400;
+    }
+  }
+
+  &__arrow {
+    transform: rotate(90deg);
+
+    @include respond-to("desktop") {
+      transform: rotate(0);
+      padding: 100px 10px 0 10px;
+    }
+  }
+}

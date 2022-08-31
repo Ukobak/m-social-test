@@ -1,0 +1,120 @@
+@import "components/header";
+@import "components/menu";
+@import "components/social-media";
+@import "components/modal";
+@import "components/main-section";
+@import "components/rules";
+@import "components/slider";
+@import "components/footer";
+@import "abstracts";
+
+html,
+body,
+div,
+span,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+em,
+img,
+strong,
+sub,
+sup,
+b,
+u,
+i,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+table,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  overscroll-behavior: auto;
+  overflow: auto;
+  min-width: 320px;
+  overflow-x: hidden;
+  overflow-y: auto;
+  font-family: $font_regular;
+}
+
+span,
+a,
+p,
+button {
+  color: #5a1404;
+  font-size: 16px;
+  line-height: 21px;
+  font-weight: 600;
+  font-family: $font_regular;
+}
+
+a,
+button {
+  text-decoration: none;
+  cursor: pointer;
+}
+
+button {
+  text-transform: uppercase;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+.container {
+  width: 100%;
+  padding: 0 10px;
+
+  @include respond-to("tablet") {
+    margin: 0 auto;
+    padding: 0 80px;
+  }
+}

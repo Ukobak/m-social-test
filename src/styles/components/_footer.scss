@@ -1,0 +1,121 @@
+@use "../abstracts/" as *;
+
+.footer {
+  margin-top: 20px;
+  padding: 25px 0;
+  background-color: $gray;
+
+  &__inner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    @include respond-to("desktop") {
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: flex-start;
+    }
+  }
+
+  &__item {
+    @include respond-to("desktop") {
+      width: 35%;
+    }
+  }
+
+  &__secondary {
+    &-list {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 20px;
+      @include respond-to("desktop") {
+      }
+    }
+
+    &-item {
+      margin-right: 30px;
+
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+
+    &-link {
+      font-size: 14px;
+      &:hover,
+      &:focus {
+        color: $red;
+      }
+
+      @include respond-to("desktop") {
+        font-size: 16px;
+      }
+    }
+  }
+
+  &__info {
+    display: flex;
+    flex-direction: column;
+    @include respond-to("desktop") {
+      order: -1;
+      width: 27%;
+    }
+
+    &-text {
+      font-size: 14px;
+      text-transform: uppercase;
+      text-align: center;
+      margin-bottom: 15px;
+      @include respond-to("desktop") {
+        font-size: 16px;
+        text-align: left;
+      }
+    }
+
+    &-phone {
+      color: #e43219;
+      font-size: 30px;
+      text-align: center;
+      @include respond-to("desktop") {
+        font-size: 36px;
+        text-align: left;
+      }
+    }
+  }
+
+  &__agreement {
+    font-size: 10px;
+    font-weight: 400;
+    color: #5b1a0d;
+
+    @include respond-to("tablet") {
+      font-size: 12px;
+    }
+    @include respond-to("desktop") {
+      padding-top: 20px;
+    }
+  }
+
+  .social-media {
+    padding: 20px 0;
+    @include respond-to("desktop") {
+      padding: 0;
+      width: 242px;
+      margin-left: 8%;
+    }
+    &__join-us {
+      display: block;
+      text-align: center;
+      @include respond-to("desktop") {
+        font-size: 16px;
+        text-align: left;
+      }
+    }
+  }
+
+  .social-icons {
+    &__item {
+      background-color: $yellow;
+    }
+  }
+}
