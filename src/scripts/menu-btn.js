@@ -7,13 +7,13 @@ const scrollChange = 200;
 menuBtn.addEventListener("click", () => {
   menuBtn.classList.toggle("menu-btn_open");
   menu.classList.toggle("menu__active");
-  //auth.classList.toggle("buttons__auth_hidden");
+  auth.classList.toggle("buttons__auth_hidden");
 });
 
 const close_menu = () => {
   menu.classList.remove("menu__active");
   menuBtn.classList.remove("menu-btn_open");
-  //auth.classList.remove("buttons__auth_hidden");
+  auth.classList.remove("buttons__auth_hidden");
 };
 
 //закрыть меню при скролле
